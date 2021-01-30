@@ -1,0 +1,58 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Graph",
+"language": "GDScript",
+"path": "res://graph.gd"
+}, {
+"base": "Mobile",
+"class": "Hostile",
+"language": "GDScript",
+"path": "res://Hostile.gd"
+}, {
+"base": "TileMap",
+"class": "Map",
+"language": "GDScript",
+"path": "res://Map.gd"
+}, {
+"base": "Node2D",
+"class": "Mobile",
+"language": "GDScript",
+"path": "res://mobile.gd"
+} ]
+_global_script_class_icons={
+"Graph": "",
+"Hostile": "",
+"Map": "",
+"Mobile": ""
+}
+
+[application]
+
+config/name="Maze"
+run/main_scene="res://Maze.tscn"
+
+[display]
+
+window/size/width=800
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Hostiles"
+2d_physics/layer_3="Tiles"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
